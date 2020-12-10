@@ -1,0 +1,24 @@
+[remote "b00giZm"]
+    url = git@github.com:b00giZm/docker-compose-nodejs-examples.git
+    fetch = +refs/heads/*:refs/remotes/b00giZm/*
+[remote "origin"]
+    url = git@github.com:huangyingw/b00giZm_docker-compose-nodejs-examples.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[push]
+    remote = origin
+[gsync]
+    remote = b00giZm
+    branch = master
+[merge]
+    allow = true
+[branch "dev"]
+    remote = origin
+    merge = refs/heads/dev
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+[gdif]
+    ignore = *.gdio.diff
+[deploy]
+	host = localhost
+	path = ~/myproject/git/docker/b00giZm/docker-compose-nodejs-examples
